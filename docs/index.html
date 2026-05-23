@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Goodnight ❤️</title>
+
+  <style>
+    body{
+      margin:0;
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#ffb6c1,#ffc0cb,#ffe4e1);
+      font-family:Poppins,sans-serif;
+      overflow:hidden;
+      text-align:center;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.2);
+      backdrop-filter:blur(10px);
+      padding:40px;
+      border-radius:25px;
+      box-shadow:0 8px 25px rgba(0,0,0,0.15);
+      animation:float 3s ease-in-out infinite;
+      max-width:400px;
+    }
+
+    h1{
+      color:white;
+      font-size:2.5rem;
+    }
+
+    p{
+      color:white;
+      font-size:1.1rem;
+    }
+
+    .heart{
+      font-size:3rem;
+      animation:heartbeat 1s infinite;
+    }
+
+    button{
+      margin-top:20px;
+      padding:15px 30px;
+      border:none;
+      border-radius:30px;
+      background:white;
+      color:#ff4f81;
+      font-size:1.1rem;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      transform:scale(1.08);
+    }
+
+    #message{
+      margin-top:20px;
+      color:white;
+      font-size:1.3rem;
+      max-width:400px;
+    }
+
+    @keyframes heartbeat{
+      0%,100%{transform:scale(1);}
+      50%{transform:scale(1.2);}
+    }
+
+    @keyframes float{
+      0%,100%{transform:translateY(0px);}
+      50%{transform:translateY(-10px);}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+  <button id="btn" onclick="showMessage()">Click Me ❤️</button>
+
+  <p id="message" style="display:none;"></p>
+</div>
+
+  <script>
+function showMessage() {
+  document.getElementById("btn").style.display = "none";
+
+  const msg = document.getElementById("message");
+  msg.style.display = "block";
+  msg.innerHTML =
+    "Goodnight my beautiful girl 🌙❤️ Sleep well and dream about us 💕";
+}
+</script>
+
+</body>
+</html>
